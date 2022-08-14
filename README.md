@@ -35,10 +35,11 @@ The file `/src/components/AppRouter.js` will lopp through the above elements and
 
 ```
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Header } from "./Header";
 import { routerConfig } from "./routerConfig";
+import { SideBar } from "./SideBar";
 
 export function AppRouter(props) {
-  
   const routeElements = routerConfig.map(function (item, index) {
     return (
       <Route key={index.toString()} path={item.path} element={item.component} />
@@ -47,14 +48,23 @@ export function AppRouter(props) {
 
   return (
     <BrowserRouter>
-      <Routes>{routeElements}</Routes>
+      <div className="app-container">
+        <Header />
+        <SideBar />
+        <main className="app-main">
+          <Routes>{routeElements}</Routes>
+        </main>
+        <footer className="footer">
+          <h2> Footer </h2>{" "}
+        </footer>
+      </div>
     </BrowserRouter>
   );
 }
 
 ```
 
-
+centralized state of the app is managed in the `/src/stateManagement` directory using redux tool kit
 
 ## Available Scripts
 

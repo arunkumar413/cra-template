@@ -1,5 +1,7 @@
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Header } from "./Header";
 import { routerConfig } from "./routerConfig";
+import { SideBar } from "./SideBar";
 
 export function AppRouter(props) {
   const routeElements = routerConfig.map(function (item, index) {
@@ -11,35 +13,8 @@ export function AppRouter(props) {
   return (
     <BrowserRouter>
       <div className="app-container">
-        <header className="app-header">
-          <nav>
-            <ol>
-              <li>
-                <Link to="/"> Home</Link>
-              </li>
-              <li>
-                <Link to="/about"> About</Link>
-              </li>
-              <li>
-                <Link to="/contact"> Contact</Link>{" "}
-              </li>
-            </ol>
-          </nav>
-        </header>
-        <aside className="left-side-bar">
-          <nav>
-            <span>
-              <Link to="/"> Home</Link>
-            </span>
-            <span>
-              <Link to="/about"> About</Link>
-            </span>
-            <span>
-              <Link to="/contact"> Contact</Link>{" "}
-            </span>
-          </nav>
-        </aside>
-
+        <Header />
+        <SideBar />
         <main className="app-main">
           <Routes>{routeElements}</Routes>
         </main>
