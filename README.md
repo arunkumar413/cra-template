@@ -31,7 +31,7 @@ export const routerConfig = [
 
 ```
 
-The file `/src/components/AppRouter.js` will lopp through the above elements and creates react-router elements as below:
+The file `/src/components/AppRouter.js` will loop through the above elements and creates react-router elements as below:
 
 ```
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
