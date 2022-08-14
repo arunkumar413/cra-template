@@ -23,7 +23,7 @@ code {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   grid-column: 1/13;
-  grid-row: 1/2;
+  grid-row: 1/1;
   justify-content: center;
   align-items: center;
 }
@@ -46,4 +46,42 @@ code {
   grid-column: 1/13;
   grid-row: 12/13;
   box-shadow: 5px 5px 5px 5px gainsboro;
+}
+
+.app-header li,
+.left-side-bar li {
+  text-decoration: none;
+  list-style: none;
+}
+.app-header nav ol {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header nav ol a,
+.left-side-bar nav ol a {
+  text-decoration: none;
+}
+
+.left-side-bar nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 5px;
+}
+
+.left-side-bar nav span a {
+  text-decoration: none;
+}
+
+.left-side-bar nav span {
+  padding: 5px;
+  padding-left: 10px;
+}
+.left-side-bar nav span:hover {
+  background-color: lightgrey;
 }

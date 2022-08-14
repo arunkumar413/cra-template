@@ -13,17 +13,30 @@ export function AppRouter(props) {
       <div className="app-container">
         <header className="app-header">
           <nav>
-            <Link to="/"> Home</Link>
-            <Link to="/about"> About</Link>
-            <Link to="/contact"> Contact</Link>{" "}
+            <ol>
+              <li>
+                <Link to="/"> Home</Link>
+              </li>
+              <li>
+                <Link to="/about"> About</Link>
+              </li>
+              <li>
+                <Link to="/contact"> Contact</Link>{" "}
+              </li>
+            </ol>
           </nav>
         </header>
         <aside className="left-side-bar">
-          <h4> A side bar element</h4>
           <nav>
-            <Link to="/"> Home</Link>
-            <Link to="/about"> About</Link>
-            <Link to="/contact"> Contact</Link>{" "}
+            <span>
+              <Link to="/"> Home</Link>
+            </span>
+            <span>
+              <Link to="/about"> About</Link>
+            </span>
+            <span>
+              <Link to="/contact"> Contact</Link>{" "}
+            </span>
           </nav>
         </aside>
 
