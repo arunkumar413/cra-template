@@ -2,6 +2,60 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Featuers:
+
+1. React
+2. React Router
+3. Redux Tool Kit
+
+configure the app routes in `/src/components/routerConfig.js` as below:
+
+```
+export const routerConfig = [
+  {
+    path: "/",
+    name: "home",
+    component: <Home />,
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: <About />,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: <Contact />,
+  },
+];
+
+```
+
+The file `/src/components/AppRouter.js` will lopp through the above elements and creates react-router elements as below:
+
+```
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { routerConfig } from "./routerConfig";
+
+export function AppRouter(props) {
+  
+  const routeElements = routerConfig.map(function (item, index) {
+    return (
+      <Route key={index.toString()} path={item.path} element={item.component} />
+    );
+  });
+
+  return (
+    <BrowserRouter>
+      <Routes>{routeElements}</Routes>
+    </BrowserRouter>
+  );
+}
+
+```
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
